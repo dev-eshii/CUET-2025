@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CUET 2025 Scorecard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            padding: 40px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            font-size: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            margin-top: 20px;
+            background-color: #28a745;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .result {
+            text-align: center;
+            font-size: 20px;
+            margin-top: 20px;
+            color: green;
+        }
+        .error {
+            text-align: center;
+            color: red;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>CUET 2025 Scorecard</h2>
+    <form method="POST">
+        <label>Select Subject:</label>
+        <select name="subject" required>
+            <option value="">-- Select Subject --</option>
+            <option value="Physics">Physics</option>
+            <option value="Chemistry">Chemistry</option>
+            <option value="Mathematics">Mathematics</option>
+            <option value="Biology">Biology</option>
+            <option value="General Test">General Test</option>
+            <option value="English">English</option>
+            <option value="Accountancy">Accountancy</option>
+            <option value="Business Studies">Business Studies</option>
+            <option value="Economics">Economics</option>
+            <option value="Political Science">Political Science</option>
+            <option value="History">History</option>
+            <!-- Add more subjects as needed -->
+        </select>
+
+        <label>Enter PAPER-1 Response Sheet URL:</label>
+        <input type="url" name="paper1_url" required placeholder="Paste Paper 1 URL (https://cdn3.digialm.com)">
+
+        <label>CAPTCHA Verification:</label>
+        <input type="text" name="captcha" required placeholder="Enter CAPTCHA (demo: 1234)">
+
+        <button type="submit">Get Score</button>
+    </form>
+
+</div>
+</body>
+</html>
